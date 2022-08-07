@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 
-const ListItem = ({ item, handleChange }) => {
+const ListItem = memo(({ item, handleChange }) => {
   const { id, from, sent_date, subject, snippet, is_unread } = item;
 
   return (
@@ -16,6 +16,6 @@ const ListItem = ({ item, handleChange }) => {
       </Link>
     </li>
   );
-};
+});
 
 export default ListItem;
