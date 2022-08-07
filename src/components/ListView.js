@@ -18,7 +18,18 @@ const ListView = () => {
     return <ListItem key={item.id} item={item} handleChange={handleChange} />;
   });
 
-  return <ul>{list}</ul>;
+  const numberOfCheckedCheckboxes = data.filter(
+    (item) => item.is_unread === true
+  ).length;
+
+  return (
+    <React.Fragment>
+      <ul>{list}</ul>
+      <p>
+        Total number of currently selected items: {numberOfCheckedCheckboxes}
+      </p>
+    </React.Fragment>
+  );
 };
 
 export default ListView;
