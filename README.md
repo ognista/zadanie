@@ -2,6 +2,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to start project?
 
-1. Install dependencies `npm isntall`
+1. Install dependencies `npm install`
 
 2. Start project `npm start`
