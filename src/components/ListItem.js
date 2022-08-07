@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ListItem = ({ item, handleChange }) => {
   const { id, from, sent_date, subject, snippet, is_unread } = item;
@@ -10,7 +11,9 @@ const ListItem = ({ item, handleChange }) => {
         checked={is_unread}
         onChange={() => handleChange(id)}
       />
-      {id} {from} {sent_date} {subject} {snippet}
+      <Link to={`/details/${id}`}>
+        {id} {from} {sent_date} {subject} {snippet}
+      </Link>
     </li>
   );
 };
