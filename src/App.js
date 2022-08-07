@@ -1,7 +1,9 @@
 import React from "react";
 
+import ListView from "./components/ListView";
+
 const App = () => {
-  return <div>App</div>;
+  return <ListView />;
 };
 
 export default App;
